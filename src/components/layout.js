@@ -13,12 +13,6 @@ const Layout = ({ children }) => {
           }
           body {
             min-height: 100vh;
-            background: rgb(93, 164, 208);
-            background: linear-gradient(
-              129deg,
-              rgba(93, 164, 208, 1) 0%,
-              rgba(61, 250, 255, 1) 100%
-            );
             margin: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -643,18 +637,14 @@ const Layout = ({ children }) => {
         `}
       />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        css={css`
+          margin: 0 auto;
+          max-width: 960px;
+          width: 100vw;
+          padding: 1.45rem 1.0875rem;
+        `}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   )
