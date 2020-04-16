@@ -4,7 +4,7 @@ const getDate = src => {
   const parts = src.split("/")
   const fullPicName = parts[parts.length - 1]
   const picName = fullPicName.split(".")[0]
-  return new Date(picName.split("_").join("-"))
+  return new Date(picName.split("_").splice(0, 3).join("-"))
 }
 
 export function useImages() {
